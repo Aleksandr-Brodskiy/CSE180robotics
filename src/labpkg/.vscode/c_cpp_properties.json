@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/al/CSE180robotics/devel/include",
+                    "/opt/ros/kinetic/include",
+                    "/home/al/CSE180robotics/src/multi_husky/husky-kinetic-devel/husky_base/include",
+                    "/home/al/CSE180robotics/src/labpkg/include",
+                    "/home/al/CSE180robotics/src/multi_husky/random/include",
+                    "/usr/include"
+                ]
+            },
+            "includePath": [
+                "/home/al/CSE180robotics/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/al/CSE180robotics/src/multi_husky/husky-kinetic-devel/husky_base/include",
+                "/home/al/CSE180robotics/src/labpkg/include",
+                "/home/al/CSE180robotics/src/multi_husky/random/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 3
+}

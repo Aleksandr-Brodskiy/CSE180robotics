@@ -1,0 +1,4 @@
+<launch> 
+	<node pkg="labpkg" type="sendtime" name="sender" /> 
+	<node pkg="labpkg" type="receivetime" name="receiver" /> 
+</launch>

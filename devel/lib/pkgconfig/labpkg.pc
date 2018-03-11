@@ -1,0 +1,8 @@
+prefix=/home/al/CSE180robotics/devel
+
+Name: labpkg
+Description: Description of labpkg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/al/CSE180robotics/devel/lib 
+Requires: 
