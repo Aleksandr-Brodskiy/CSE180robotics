@@ -7,10 +7,10 @@
 # include <actionlib/client/simple_action_client.h>
 int run(int c, char **v)
 {
-  ros::init(c, v, "saferandomwalk");
-  ros::NodeHandle nh;
-   
-  return 0;
+    ros::init(c, v, "saferandomwalk");
+    ros::NodeHandle nh;
+
+    return 0;
 }
 int main(int argc, char **argv)
 {
