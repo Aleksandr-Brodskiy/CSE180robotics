@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/al/CSE180robotics/src/labpkg/src/gotoposetimeout.cpp
+/home/al/CSE180robotics/src/labpkg/src/detectdivergence.cpp
 cmath
 -
 cstdlib

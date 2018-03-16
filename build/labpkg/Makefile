@@ -67,17 +67,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -88,6 +77,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -166,49 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-labpkg/CMakeFiles/gotoposetimeout.dir/rule:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/gotoposetimeout.dir/rule
-.PHONY : labpkg/CMakeFiles/gotoposetimeout.dir/rule
+labpkg/CMakeFiles/detectdivergence.dir/rule:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/detectdivergence.dir/rule
+.PHONY : labpkg/CMakeFiles/detectdivergence.dir/rule
 
 # Convenience name for target.
-gotoposetimeout: labpkg/CMakeFiles/gotoposetimeout.dir/rule
+detectdivergence: labpkg/CMakeFiles/detectdivergence.dir/rule
 
-.PHONY : gotoposetimeout
+.PHONY : detectdivergence
 
 # fast build rule for target.
-gotoposetimeout/fast:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotoposetimeout.dir/build.make labpkg/CMakeFiles/gotoposetimeout.dir/build
-.PHONY : gotoposetimeout/fast
-
-# Convenience name for target.
-labpkg/CMakeFiles/gotopose.dir/rule:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/gotopose.dir/rule
-.PHONY : labpkg/CMakeFiles/gotopose.dir/rule
-
-# Convenience name for target.
-gotopose: labpkg/CMakeFiles/gotopose.dir/rule
-
-.PHONY : gotopose
-
-# fast build rule for target.
-gotopose/fast:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotopose.dir/build.make labpkg/CMakeFiles/gotopose.dir/build
-.PHONY : gotopose/fast
-
-# Convenience name for target.
-labpkg/CMakeFiles/getpose.dir/rule:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/getpose.dir/rule
-.PHONY : labpkg/CMakeFiles/getpose.dir/rule
-
-# Convenience name for target.
-getpose: labpkg/CMakeFiles/getpose.dir/rule
-
-.PHONY : getpose
-
-# fast build rule for target.
-getpose/fast:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/getpose.dir/build.make labpkg/CMakeFiles/getpose.dir/build
-.PHONY : getpose/fast
+detectdivergence/fast:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/build
+.PHONY : detectdivergence/fast
 
 # Convenience name for target.
 labpkg/CMakeFiles/actionlib_generate_messages_py.dir/rule:
@@ -526,6 +496,21 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
+labpkg/CMakeFiles/saferandomwalk.dir/rule:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/saferandomwalk.dir/rule
+.PHONY : labpkg/CMakeFiles/saferandomwalk.dir/rule
+
+# Convenience name for target.
+saferandomwalk: labpkg/CMakeFiles/saferandomwalk.dir/rule
+
+.PHONY : saferandomwalk
+
+# fast build rule for target.
+saferandomwalk/fast:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/build
+.PHONY : saferandomwalk/fast
+
+# Convenience name for target.
 labpkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
 	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : labpkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
@@ -735,86 +720,59 @@ tf2_msgs_generate_messages_eus/fast:
 	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make labpkg/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
-src/getpose.o: src/getpose.cpp.o
+src/detectdivergence.o: src/detectdivergence.cpp.o
 
-.PHONY : src/getpose.o
-
-# target to build an object file
-src/getpose.cpp.o:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/getpose.dir/build.make labpkg/CMakeFiles/getpose.dir/src/getpose.cpp.o
-.PHONY : src/getpose.cpp.o
-
-src/getpose.i: src/getpose.cpp.i
-
-.PHONY : src/getpose.i
-
-# target to preprocess a source file
-src/getpose.cpp.i:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/getpose.dir/build.make labpkg/CMakeFiles/getpose.dir/src/getpose.cpp.i
-.PHONY : src/getpose.cpp.i
-
-src/getpose.s: src/getpose.cpp.s
-
-.PHONY : src/getpose.s
-
-# target to generate assembly for a file
-src/getpose.cpp.s:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/getpose.dir/build.make labpkg/CMakeFiles/getpose.dir/src/getpose.cpp.s
-.PHONY : src/getpose.cpp.s
-
-src/gotopose.o: src/gotopose.cpp.o
-
-.PHONY : src/gotopose.o
+.PHONY : src/detectdivergence.o
 
 # target to build an object file
-src/gotopose.cpp.o:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotopose.dir/build.make labpkg/CMakeFiles/gotopose.dir/src/gotopose.cpp.o
-.PHONY : src/gotopose.cpp.o
+src/detectdivergence.cpp.o:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/src/detectdivergence.cpp.o
+.PHONY : src/detectdivergence.cpp.o
 
-src/gotopose.i: src/gotopose.cpp.i
+src/detectdivergence.i: src/detectdivergence.cpp.i
 
-.PHONY : src/gotopose.i
+.PHONY : src/detectdivergence.i
 
 # target to preprocess a source file
-src/gotopose.cpp.i:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotopose.dir/build.make labpkg/CMakeFiles/gotopose.dir/src/gotopose.cpp.i
-.PHONY : src/gotopose.cpp.i
+src/detectdivergence.cpp.i:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/src/detectdivergence.cpp.i
+.PHONY : src/detectdivergence.cpp.i
 
-src/gotopose.s: src/gotopose.cpp.s
+src/detectdivergence.s: src/detectdivergence.cpp.s
 
-.PHONY : src/gotopose.s
+.PHONY : src/detectdivergence.s
 
 # target to generate assembly for a file
-src/gotopose.cpp.s:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotopose.dir/build.make labpkg/CMakeFiles/gotopose.dir/src/gotopose.cpp.s
-.PHONY : src/gotopose.cpp.s
+src/detectdivergence.cpp.s:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/src/detectdivergence.cpp.s
+.PHONY : src/detectdivergence.cpp.s
 
-src/gotoposetimeout.o: src/gotoposetimeout.cpp.o
+src/saferandomwalk.o: src/saferandomwalk.cpp.o
 
-.PHONY : src/gotoposetimeout.o
+.PHONY : src/saferandomwalk.o
 
 # target to build an object file
-src/gotoposetimeout.cpp.o:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotoposetimeout.dir/build.make labpkg/CMakeFiles/gotoposetimeout.dir/src/gotoposetimeout.cpp.o
-.PHONY : src/gotoposetimeout.cpp.o
+src/saferandomwalk.cpp.o:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o
+.PHONY : src/saferandomwalk.cpp.o
 
-src/gotoposetimeout.i: src/gotoposetimeout.cpp.i
+src/saferandomwalk.i: src/saferandomwalk.cpp.i
 
-.PHONY : src/gotoposetimeout.i
+.PHONY : src/saferandomwalk.i
 
 # target to preprocess a source file
-src/gotoposetimeout.cpp.i:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotoposetimeout.dir/build.make labpkg/CMakeFiles/gotoposetimeout.dir/src/gotoposetimeout.cpp.i
-.PHONY : src/gotoposetimeout.cpp.i
+src/saferandomwalk.cpp.i:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.i
+.PHONY : src/saferandomwalk.cpp.i
 
-src/gotoposetimeout.s: src/gotoposetimeout.cpp.s
+src/saferandomwalk.s: src/saferandomwalk.cpp.s
 
-.PHONY : src/gotoposetimeout.s
+.PHONY : src/saferandomwalk.s
 
 # target to generate assembly for a file
-src/gotoposetimeout.cpp.s:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/gotoposetimeout.dir/build.make labpkg/CMakeFiles/gotoposetimeout.dir/src/gotoposetimeout.cpp.s
-.PHONY : src/gotoposetimeout.cpp.s
+src/saferandomwalk.cpp.s:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.s
+.PHONY : src/saferandomwalk.cpp.s
 
 # Help Target
 help:
@@ -823,11 +781,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... test"
-	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... gotoposetimeout"
-	@echo "... gotopose"
-	@echo "... getpose"
+	@echo "... install/local"
+	@echo "... detectdivergence"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_nodejs"
@@ -851,6 +807,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... saferandomwalk"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
@@ -867,15 +824,12 @@ help:
 	@echo "... install"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... src/getpose.o"
-	@echo "... src/getpose.i"
-	@echo "... src/getpose.s"
-	@echo "... src/gotopose.o"
-	@echo "... src/gotopose.i"
-	@echo "... src/gotopose.s"
-	@echo "... src/gotoposetimeout.o"
-	@echo "... src/gotoposetimeout.i"
-	@echo "... src/gotoposetimeout.s"
+	@echo "... src/detectdivergence.o"
+	@echo "... src/detectdivergence.i"
+	@echo "... src/detectdivergence.s"
+	@echo "... src/saferandomwalk.o"
+	@echo "... src/saferandomwalk.i"
+	@echo "... src/saferandomwalk.s"
 .PHONY : help
 
 

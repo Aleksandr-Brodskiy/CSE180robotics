@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/al/CSE180robotics/src/labpkg/src/gotopose.cpp
+/home/al/CSE180robotics/src/labpkg/src/saferandomwalk.cpp
 cmath
 -
 cstdlib

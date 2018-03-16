@@ -7,10 +7,8 @@
 # include <actionlib/client/simple_action_client.h>
 int run(int c, char **v)
 {
-  ros::init(c, v, "detectdivergence");
-  ros::NodeHandle nh;
-   
-  return 0;
+
+    return 0;
 }
 int main(int argc, char **argv)
 {
