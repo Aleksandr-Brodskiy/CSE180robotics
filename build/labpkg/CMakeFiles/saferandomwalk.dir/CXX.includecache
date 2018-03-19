@@ -9,17 +9,19 @@
 /home/al/CSE180robotics/src/labpkg/src/saferandomwalk.cpp
 ros/ros.h
 -
-move_base_msgs/MoveBaseAction.h
--
-actionlib/client/simple_action_client.h
--
 nav_msgs/GetPlan.h
+-
+geometry_msgs/Pose2D.h
+-
+sensor_msgs/LaserScan.h
 -
 tf2/LinearMath/Quaternion.h
 -
+move_base_msgs/MoveBaseAction.h
+-
 tf2_geometry_msgs/tf2_geometry_msgs.h
 -
-sensor_msgs/LaserScan.h
+actionlib/client/simple_action_client.h
 -
 
 /opt/ros/kinetic/include/actionlib/action_definition.h
@@ -294,6 +296,22 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 geometry_msgs/Quaternion.h
+-
+
+/opt/ros/kinetic/include/geometry_msgs/Pose2D.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h

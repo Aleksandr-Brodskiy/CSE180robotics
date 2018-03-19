@@ -25,6 +25,7 @@ labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/
 labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
 labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PointStamped.h
 labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
+labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose2D.h
 labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
 labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
 labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o: /opt/ros/kinetic/include/geometry_msgs/QuaternionStamped.h

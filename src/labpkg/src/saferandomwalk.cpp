@@ -1,98 +1,83 @@
-#include <ros/ros.h>
-#include <move_base_msgs/MoveBaseAction.h>
-#include <actionlib/client/simple_action_client.h>
-#include <nav_msgs/GetPlan.h>
-#include <tf2/LinearMath/Quaternion.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
-#include <sensor_msgs/LaserScan.h>
+// written by Aleksandr Brodskiy
+# include <ros/ros.h>
+# include <nav_msgs/GetPlan.h>
+# include <geometry_msgs/Pose2D.h>
+# include <sensor_msgs/LaserScan.h>
+# include <tf2/LinearMath/Quaternion.h>
+# include <move_base_msgs/MoveBaseAction.h>
+# include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+# include <actionlib/client/simple_action_client.h>
 
-bool tooClose = false;
-int servCounter = 0;
-void scanMessageRecieved(const sensor_msgs::LaserScan&msg){
-    for(int i = 1; i< msg.ranges.size(); i++){
-        if (msg.ranges[i] < 0.4){
-            
-            tooClose = true;
+bool obstacleProximity = false;
+int counter = 0;
+
+void scanMessageRecieved(const sensor_msgs::LaserScan&msg)
+{
+    for (int c = 0; c < (msg.ranges.size() - 1); c++)
+    {
+        if (msg.ranges[c] < 0.4)
+        {
+            obstacleProximity = true;
             break;
         }
         else 
         {
-            tooClose = false;
+            obstacleProximity = false;
         }
-       
-        
     }
 }
 
-void serviceActivated(){
-	ROS_INFO_STREAM("Services recieved goal");
-
+void actionHandlerAssign()
+{
+	ROS_INFO_STREAM("\n\t\tRandom GOAL Assigned\n\n");
 }
 
-void serviceDone(const actionlib::SimpleClientGoalState& state, const move_base_msgs::MoveBaseResultConstPtr& result){
- 
-		ROS_INFO_STREAM("Service completed");
-		ROS_INFO_STREAM("Final state " << state.toString().c_str());
-
-
+void actionHandlerReach(const actionlib::SimpleClientGoalState& state, const move_base_msgs::MoveBaseResultConstPtr& result)
+{
+		ROS_INFO_STREAM("\n\t\tRandom GOAL Reached\n\n");
 }
 
-
-void serviceFeedback(const move_base_msgs::MoveBaseFeedbackConstPtr& fb){
-	
-   if (servCounter == 10){
-    
-        ROS_INFO_STREAM("Service still running");
-	    ROS_INFO_STREAM("Current pose (x,y) " << fb->base_position.pose.position.x<< "," << fb->base_position.pose.position.y);
-            servCounter = -1;
+void actionHandlerLive(const move_base_msgs::MoveBaseFeedbackConstPtr& fb)
+{
+   if (counter == 10)
+   {
+	    ROS_INFO_STREAM("\n\t\tCurrent position:\t(x: " << fb->base_position.pose.position.x << ", y: " << fb->base_position.pose.position.y << ")\n\n");
+        counter = -1;
     }
-    servCounter++;
-
+    counter++;
 }
 
-
-
-int main (int argc, char **argv) {
-
-	ros::init(argc,argv, "saferandomwalk");
+int run (int c, char **v) 
+{
+	ros::init(c, v, "saferandomwalk");
 	ros::NodeHandle nh;
-
-	actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> ac("move_base", true);	
+	actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> goToGoal("move_base", true);	
 	ros::Subscriber sub = nh.subscribe("/scan",1000,&scanMessageRecieved);
-	ROS_INFO_STREAM("Waiting for server to be availabel ... ");
-	tf2::Quaternion q;
-    
-
-	while (!ac.waitForServer()) { }
-    ros::Rate r(1);
-	ROS_INFO_STREAM("done!");
-  	while (ros::ok() ) {
-             
+	tf2::Quaternion quaternion;
+    ros::Rate rate(1);
+  	while (ros::ok()) 
+    {
 		move_base_msgs::MoveBaseGoal goal;
-
 		goal.target_pose.header.frame_id = "map";
 		goal.target_pose.header.stamp = ros::Time::now();
-
-		q.setRPY ( 0 , 0 , ((double)(rand() % 3))/5);
-		goal.target_pose.pose.position.x = ((double)(rand() % 3));
-
-		goal.target_pose.pose.orientation = tf2::toMsg(q);
-
-
-
-		ac.sendGoal(goal, &serviceDone,&serviceActivated,&serviceFeedback);
+		quaternion.setRPY ( 0 , 0 , ((double)(rand() % 7))/3);
+		goal.target_pose.pose.position.x = ((double)(rand() % 7));
+		goal.target_pose.pose.orientation = tf2::toMsg(quaternion);
+		goToGoal.sendGoal(goal, &actionHandlerReach, &actionHandlerAssign, &actionHandlerLive);
         ros::spinOnce();
-       
-        if (tooClose == true){
-            ac.cancelAllGoals();
-            r.sleep();
+        if (obstacleProximity)
+        {
+            ROS_INFO_STREAM("\n\t\tObstaclce within 0.2[m]\n\n");
+            goToGoal.cancelAllGoals();
+            rate.sleep();
+            // exit(0);
         }
- 		
-        r.sleep();
-        
-
-
+        rate.sleep();
 	}
  	return 0;
+}
 
+int main(int argc, char **argv)
+{
+    return run(argc, argv);
 }
