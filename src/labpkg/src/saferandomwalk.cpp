@@ -11,7 +11,7 @@
 bool obstacleProximity = false;
 int counter = 0;
 
-void scanMessageRecieved(const sensor_msgs::LaserScan&msg)
+void readLocation(const sensor_msgs::LaserScan&msg)
 {
     for (int c = 0; c < (msg.ranges.size() - 1); c++)
     {
@@ -27,16 +27,6 @@ void scanMessageRecieved(const sensor_msgs::LaserScan&msg)
     }
 }
 
-void actionHandlerAssign()
-{
-	ROS_INFO_STREAM("\n\t\tRandom GOAL Assigned\n\n");
-}
-
-void actionHandlerReach(const actionlib::SimpleClientGoalState& state, const move_base_msgs::MoveBaseResultConstPtr& result)
-{
-		ROS_INFO_STREAM("\n\t\tRandom GOAL Reached\n\n");
-}
-
 void actionHandlerLive(const move_base_msgs::MoveBaseFeedbackConstPtr& fb)
 {
    if (counter == 10)
@@ -47,12 +37,22 @@ void actionHandlerLive(const move_base_msgs::MoveBaseFeedbackConstPtr& fb)
     counter++;
 }
 
+void actionHandlerAssign()
+{
+	ROS_INFO_STREAM("\n\t\tRandom GOAL Assigned\n\n");
+}
+
+void actionHandlerReach(const actionlib::SimpleClientGoalState& state, const move_base_msgs::MoveBaseResultConstPtr& result)
+{
+		ROS_INFO_STREAM("\n\t\tRandom GOAL Reached\n\n");
+}
+
 int run (int c, char **v) 
 {
 	ros::init(c, v, "saferandomwalk");
 	ros::NodeHandle nh;
 	actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> goToGoal("move_base", true);	
-	ros::Subscriber sub = nh.subscribe("/scan",1000,&scanMessageRecieved);
+	ros::Subscriber sub = nh.subscribe("/scan",1000,&readLocation);
 	tf2::Quaternion quaternion;
     ros::Rate rate(1);
   	while (ros::ok()) 
