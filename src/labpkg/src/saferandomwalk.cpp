@@ -21,7 +21,7 @@ void readLocation(const sensor_msgs::LaserScan&msg)
             break;
         }
         else 
-        {
+       {
             obstacleProximity = false;
         }
     }
