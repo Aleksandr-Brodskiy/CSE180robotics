@@ -1,11 +1,18 @@
 # Hashes of file build rules.
 a17da9a88e117b466286b5752d765d79 /home/al/CSE180robotics/devel/include/husky_msgs/HuskyStatus.h
+5c511eb3809d92e90a2af30a88859837 /home/al/CSE180robotics/devel/include/logical_camera_plugin/logicalImage.h
 afb609ae8d255b3090300793b3055e29 /home/al/CSE180robotics/devel/lib/python2.7/dist-packages/husky_msgs/msg/_HuskyStatus.py
 48f1d14f42a71868567a819243295c84 /home/al/CSE180robotics/devel/lib/python2.7/dist-packages/husky_msgs/msg/__init__.py
+2f8e03c8e86c80a91f1eeaf1a2719474 /home/al/CSE180robotics/devel/lib/python2.7/dist-packages/logical_camera_plugin/msg/__init__.py
+ee9d07b483dba5944cd4a1e669d4cdba /home/al/CSE180robotics/devel/lib/python2.7/dist-packages/logical_camera_plugin/msg/_logicalImage.py
 28f0b8b4409865e1e9297a33877ae876 /home/al/CSE180robotics/devel/share/common-lisp/ros/husky_msgs/msg/HuskyStatus.lisp
+4672758a2b0c7d7831ffed7dead11a63 /home/al/CSE180robotics/devel/share/common-lisp/ros/logical_camera_plugin/msg/logicalImage.lisp
 c296d3af7c08b0ee4a8ec557a8a9922d /home/al/CSE180robotics/devel/share/gennodejs/ros/husky_msgs/msg/HuskyStatus.js
+fb818d6de42ae07b659ddf98335e43e1 /home/al/CSE180robotics/devel/share/gennodejs/ros/logical_camera_plugin/msg/logicalImage.js
 8806f5ed08a6036e810b49fe04008bc5 /home/al/CSE180robotics/devel/share/roseus/ros/husky_msgs/manifest.l
 fec59b5dcf35128d22b5d356f6444eb2 /home/al/CSE180robotics/devel/share/roseus/ros/husky_msgs/msg/HuskyStatus.l
+f01cff8a796d51d9e3d0af97e97b74b8 /home/al/CSE180robotics/devel/share/roseus/ros/logical_camera_plugin/manifest.l
+fc2ceab64607647ca7558a5b9fb3112d /home/al/CSE180robotics/devel/share/roseus/ros/logical_camera_plugin/msg/logicalImage.l
 b8233b58f9afb89b0eedb562d4f47fea CMakeFiles/clean_test_results
 18c148dd7e64aa2ed42cd138364c504c husky-kinetic-devel/husky_base/CMakeFiles/_run_tests_husky_base_roslaunch-check_launch
 91c46202440a857dbece9e1c81924f24 husky-kinetic-devel/husky_base/CMakeFiles/clean_test_results_husky_base
@@ -34,3 +41,9 @@ c6bded37314ff472086510729d78efa9 husky-kinetic-devel/husky_gazebo/CMakeFiles/run
 528d6cfb45d7bf15712d1467ef45d95a husky-kinetic-devel/husky_viz/CMakeFiles/_run_tests_husky_viz_roslaunch-check_launch
 448f36d54883daa458f73eda870d17e3 husky-kinetic-devel/husky_viz/CMakeFiles/clean_test_results_husky_viz
 528d6cfb45d7bf15712d1467ef45d95a husky-kinetic-devel/husky_viz/CMakeFiles/run_tests_husky_viz_roslaunch-check_launch
+9ecd3fda3d6d6fef7a0a7658542f1075 logical_camera_plugin/CMakeFiles/_logical_camera_plugin_generate_messages_check_deps_logicalImage
+400d36124fe8ab6de40cad3a9fd36e46 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_cpp
+400d36124fe8ab6de40cad3a9fd36e46 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_eus
+400d36124fe8ab6de40cad3a9fd36e46 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_lisp
+400d36124fe8ab6de40cad3a9fd36e46 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_nodejs
+400d36124fe8ab6de40cad3a9fd36e46 logical_camera_plugin/CMakeFiles/logical_camera_plugin_generate_messages_py

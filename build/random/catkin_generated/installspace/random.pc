@@ -1,0 +1,8 @@
+prefix=/home/al/CSE180robotics/install
+
+Name: random
+Description: Description of random
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/al/CSE180robotics/install/lib 
+Requires: 

@@ -67,17 +67,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -88,6 +77,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -166,19 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-labpkg/CMakeFiles/detectdivergence.dir/rule:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/detectdivergence.dir/rule
-.PHONY : labpkg/CMakeFiles/detectdivergence.dir/rule
+labpkg/CMakeFiles/uncertainty.dir/rule:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/uncertainty.dir/rule
+.PHONY : labpkg/CMakeFiles/uncertainty.dir/rule
 
 # Convenience name for target.
-detectdivergence: labpkg/CMakeFiles/detectdivergence.dir/rule
+uncertainty: labpkg/CMakeFiles/uncertainty.dir/rule
 
-.PHONY : detectdivergence
+.PHONY : uncertainty
 
 # fast build rule for target.
-detectdivergence/fast:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/build
-.PHONY : detectdivergence/fast
+uncertainty/fast:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/uncertainty.dir/build.make labpkg/CMakeFiles/uncertainty.dir/build
+.PHONY : uncertainty/fast
 
 # Convenience name for target.
 labpkg/CMakeFiles/actionlib_generate_messages_py.dir/rule:
@@ -496,21 +496,6 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
-labpkg/CMakeFiles/saferandomwalk.dir/rule:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/saferandomwalk.dir/rule
-.PHONY : labpkg/CMakeFiles/saferandomwalk.dir/rule
-
-# Convenience name for target.
-saferandomwalk: labpkg/CMakeFiles/saferandomwalk.dir/rule
-
-.PHONY : saferandomwalk
-
-# fast build rule for target.
-saferandomwalk/fast:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/build
-.PHONY : saferandomwalk/fast
-
-# Convenience name for target.
 labpkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
 	cd /home/al/CSE180robotics/build && $(MAKE) -f CMakeFiles/Makefile2 labpkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : labpkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
@@ -720,59 +705,32 @@ tf2_msgs_generate_messages_eus/fast:
 	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make labpkg/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
-src/detectdivergence.o: src/detectdivergence.cpp.o
+src/uncertainty.o: src/uncertainty.cpp.o
 
-.PHONY : src/detectdivergence.o
-
-# target to build an object file
-src/detectdivergence.cpp.o:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/src/detectdivergence.cpp.o
-.PHONY : src/detectdivergence.cpp.o
-
-src/detectdivergence.i: src/detectdivergence.cpp.i
-
-.PHONY : src/detectdivergence.i
-
-# target to preprocess a source file
-src/detectdivergence.cpp.i:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/src/detectdivergence.cpp.i
-.PHONY : src/detectdivergence.cpp.i
-
-src/detectdivergence.s: src/detectdivergence.cpp.s
-
-.PHONY : src/detectdivergence.s
-
-# target to generate assembly for a file
-src/detectdivergence.cpp.s:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/detectdivergence.dir/build.make labpkg/CMakeFiles/detectdivergence.dir/src/detectdivergence.cpp.s
-.PHONY : src/detectdivergence.cpp.s
-
-src/saferandomwalk.o: src/saferandomwalk.cpp.o
-
-.PHONY : src/saferandomwalk.o
+.PHONY : src/uncertainty.o
 
 # target to build an object file
-src/saferandomwalk.cpp.o:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.o
-.PHONY : src/saferandomwalk.cpp.o
+src/uncertainty.cpp.o:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/uncertainty.dir/build.make labpkg/CMakeFiles/uncertainty.dir/src/uncertainty.cpp.o
+.PHONY : src/uncertainty.cpp.o
 
-src/saferandomwalk.i: src/saferandomwalk.cpp.i
+src/uncertainty.i: src/uncertainty.cpp.i
 
-.PHONY : src/saferandomwalk.i
+.PHONY : src/uncertainty.i
 
 # target to preprocess a source file
-src/saferandomwalk.cpp.i:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.i
-.PHONY : src/saferandomwalk.cpp.i
+src/uncertainty.cpp.i:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/uncertainty.dir/build.make labpkg/CMakeFiles/uncertainty.dir/src/uncertainty.cpp.i
+.PHONY : src/uncertainty.cpp.i
 
-src/saferandomwalk.s: src/saferandomwalk.cpp.s
+src/uncertainty.s: src/uncertainty.cpp.s
 
-.PHONY : src/saferandomwalk.s
+.PHONY : src/uncertainty.s
 
 # target to generate assembly for a file
-src/saferandomwalk.cpp.s:
-	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/saferandomwalk.dir/build.make labpkg/CMakeFiles/saferandomwalk.dir/src/saferandomwalk.cpp.s
-.PHONY : src/saferandomwalk.cpp.s
+src/uncertainty.cpp.s:
+	cd /home/al/CSE180robotics/build && $(MAKE) -f labpkg/CMakeFiles/uncertainty.dir/build.make labpkg/CMakeFiles/uncertainty.dir/src/uncertainty.cpp.s
+.PHONY : src/uncertainty.cpp.s
 
 # Help Target
 help:
@@ -781,9 +739,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... test"
-	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... detectdivergence"
+	@echo "... install/strip"
+	@echo "... uncertainty"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_nodejs"
@@ -807,7 +765,6 @@ help:
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... saferandomwalk"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
@@ -824,12 +781,9 @@ help:
 	@echo "... install"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... src/detectdivergence.o"
-	@echo "... src/detectdivergence.i"
-	@echo "... src/detectdivergence.s"
-	@echo "... src/saferandomwalk.o"
-	@echo "... src/saferandomwalk.i"
-	@echo "... src/saferandomwalk.s"
+	@echo "... src/uncertainty.o"
+	@echo "... src/uncertainty.i"
+	@echo "... src/uncertainty.s"
 .PHONY : help
 
 
