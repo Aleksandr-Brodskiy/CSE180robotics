@@ -21,7 +21,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include"
-  "/home/al/CSE180robotics/devel/include"
+  "/home/al/wsfinal/devel/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

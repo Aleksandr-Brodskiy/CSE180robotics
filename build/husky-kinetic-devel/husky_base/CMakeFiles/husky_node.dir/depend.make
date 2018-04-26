@@ -67,7 +67,6 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/horizon_legacy_wrap
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/horizon_legacy_wrapper.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/horizon_legacy_wrapper.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/CSE180robotics/devel/include/husky_msgs/HuskyStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Exception.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Message.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Message_cmd.h
@@ -79,6 +78,7 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/husky_diagnostics.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/husky_hardware.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/src/husky_base.cpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /home/al/wsfinal/devel/include/husky_msgs/HuskyStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/class_loader/class_loader.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/class_loader/class_loader_core.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/class_loader/class_loader_exceptions.h
@@ -196,7 +196,6 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_base.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/CSE180robotics/devel/include/husky_msgs/HuskyStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Exception.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Message.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Message_cmd.h
@@ -207,6 +206,7 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.c
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy_wrapper.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/husky_diagnostics.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/src/husky_diagnostics.cpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /home/al/wsfinal/devel/include/husky_msgs/HuskyStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /opt/ros/kinetic/include/diagnostic_msgs/DiagnosticArray.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /opt/ros/kinetic/include/diagnostic_msgs/DiagnosticStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /opt/ros/kinetic/include/diagnostic_msgs/KeyValue.h
@@ -272,7 +272,6 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.c
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_diagnostics.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 
-husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/CSE180robotics/devel/include/husky_msgs/HuskyStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Exception.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Message.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Message_cmd.h
@@ -284,6 +283,7 @@ husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/husky_diagnostics.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/husky_hardware.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/src/husky_hardware.cpp
+husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /home/al/wsfinal/devel/include/husky_msgs/HuskyStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /opt/ros/kinetic/include/diagnostic_msgs/DiagnosticArray.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /opt/ros/kinetic/include/diagnostic_msgs/DiagnosticStatus.h
 husky-kinetic-devel/husky_base/CMakeFiles/husky_node.dir/src/husky_hardware.cpp.o: /opt/ros/kinetic/include/diagnostic_msgs/KeyValue.h

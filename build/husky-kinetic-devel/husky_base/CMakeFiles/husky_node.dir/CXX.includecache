@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/al/CSE180robotics/devel/include/husky_msgs/HuskyStatus.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-
 /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/include/husky_base/horizon_legacy/Exception.h
 iostream
 -
@@ -140,6 +122,24 @@ husky_base/husky_diagnostics.h
 husky_base/husky_hardware.h
 /home/al/CSE180robotics/src/husky-kinetic-devel/husky_base/src/husky_base/husky_hardware.h
 boost/assign/list_of.hpp
+-
+
+/home/al/wsfinal/devel/include/husky_msgs/HuskyStatus.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
 -
 
 /opt/ros/kinetic/include/class_loader/class_loader.h

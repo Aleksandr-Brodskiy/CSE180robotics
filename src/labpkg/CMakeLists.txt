@@ -8,7 +8,12 @@ find_package(catkin REQUIRED COMPONENTS
   tf2_ros
 )
 catkin_package()
-include_directories(  ${catkin_INCLUDE_DIRS})
+find_package(cmake_modules REQUIRED)
+find_package(Eigen REQUIRED)
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS} ${Eigen_INCLUDE_DIRS}
+)
 
 # add_executable(sendtime src/sendtime.cpp)
 # add_executable(receivetime src/receivetime.cpp)
@@ -21,6 +26,7 @@ include_directories(  ${catkin_INCLUDE_DIRS})
 # add_executable(gotoposetimeout src/gotoposetimeout.cpp)
 # add_executable(saferandomwalk src/saferandomwalk.cpp)
 # add_executable(detectdivergence src/detectdivergence.cpp)
+# add_executable(random src/random.cpp)
 add_executable(uncertainty src/uncertainty.cpp)
 
 # target_link_libraries(sendtime ${catkin_LIBRARIES})
@@ -34,4 +40,5 @@ add_executable(uncertainty src/uncertainty.cpp)
 # target_link_libraries(gotoposetimeout ${catkin_LIBRARIES})
 # target_link_libraries(saferandomwalk ${catkin_LIBRARIES})
 # target_link_libraries(detectdivergence ${catkin_LIBRARIES})
+# target_link_libraries(random ${catkin_LIBRARIES})
 target_link_libraries(uncertainty ${catkin_LIBRARIES})
