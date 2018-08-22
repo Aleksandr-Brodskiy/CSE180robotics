@@ -1,3 +1,2 @@
 
-*.txt linguist-language=C++
-*.xml linguist-language=C++
+*.make linguist-language=C++
